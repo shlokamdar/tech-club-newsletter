@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Certificate | Tech Club</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e9e5dc;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    .wrapper {
+      width: 100%;
+      background: #e9e5dc;
+    }
+
+    .container {
+      width: 700px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: #fdfcf8;
+    }
+
+    .section {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: 50px;
+      line-height: 0.98;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+    }
+
+    .hero-subtitle {
+      margin: 24px 0 0;
+      max-width: 590px;
+      font-size: 18px;
+      line-height: 1.55;
+      color: #555;
+    }
+
+    .body-text {
+      margin: 0 0 18px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .intro-text {
+      margin: 0 0 22px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 32px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    .divider {
+      height: 1px;
+      background: #222;
+    }
+
+    .soft-divider {
+      height: 1px;
+      background: #d8d3ca;
+    }
+
+    .panel-box {
+      background: #eee9df;
+    }
+
+    .panel-cell {
+      width: 33.33%;
+      padding: 25px 15px;
+    }
+
+    .panel-cell + .panel-cell {
+      border-left: 1px solid #d2cdc3;
+    }
+
+    .panel-label {
+      margin: 0 0 6px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .panel-name {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .quote-box {
+      padding: 30px 0;
+      border-top: 1px solid #d8d3ca;
+      border-bottom: 1px solid #d8d3ca;
+    }
+
+    .quote {
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    .quote-caption {
+      margin: 15px 0 0;
+      font-size: 12px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .dark-box {
+      background: #202020;
+      color: #fff;
+    }
+
+    .dark-content {
+      padding: 32px;
+    }
+
+    .dark-eyebrow {
+      margin: 0 0 10px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    .dark-title {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    .dark-text {
+      margin: 0 0 17px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #eee;
+    }
+
+    .dark-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .stats {
+      width: 100%;
+    }
+
+    .stat {
+      width: 33.33%;
+      padding: 22px 10px;
+      border-top: 1px solid #bbb;
+      vertical-align: top;
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+    }
+
+    .stat:last-child {
+      padding-right: 0;
+    }
+
+    .stat-number {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .stat-description {
+      margin: 7px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #666;
+    }
+
+    .callout {
+      border-left: 4px solid #222;
+      padding: 5px 0 5px 24px;
+    }
+
+    .callout-text {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    .soft-box {
+      background: #eeeae2;
+    }
+
+    .soft-content {
+      padding: 30px;
+    }
+
+    .soft-eyebrow {
+      margin: 0 0 10px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .soft-title {
+      margin: 0 0 15px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    .soft-text {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .border-box {
+      padding: 28px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+    }
+
+    .border-title {
+      margin: 0 0 15px;
+      font-size: 27px;
+      line-height: 1.2;
+    }
+
+    .border-text {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+    }
+
+    .faculty-box {
+      padding: 25px;
+      background: #eee9df;
+    }
+
+    .faculty-title {
+      margin: 0 0 12px;
+      font-size: 21px;
+    }
+
+    .faculty-lead {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .faculty-text {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .final-title {
+      margin: 0 0 20px;
+      font-size: 37px;
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+    }
+
+    .final-text {
+      margin: 0 0 18px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .final-line {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .footer {
+      padding: 25px 48px;
+      background: #202020;
+      color: #fff;
+    }
+
+    .footer-title {
+      margin: 0 0 6px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .footer-text {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #aaa;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .section {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+      }
+
+      .hero-title {
+        font-size: 40px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .panel-cell {
+        display: block;
+        width: 100%;
+      }
+
+      .panel-cell + .panel-cell {
+        border-left: none;
+        border-top: 1px solid #d2cdc3;
+      }
+
+      .stat {
+        display: block;
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .stat + .stat {
+        border-top: 1px solid #bbb;
+      }
+
+      .quote {
+        font-size: 22px;
+      }
+
+      .dark-content {
+        padding: 25px;
+      }
+
+      .footer {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<table class="wrapper" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" style="padding:30px 15px;">
+
+      <table class="container" width="700" cellpadding="0" cellspacing="0" border="0">
+
+        <!-- ========================================= -->
+        <!-- HEADER -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:38px; padding-bottom:15px;">
+
+            <p class="eyebrow">
+              Tech Club / Event Dispatch
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- HERO -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:10px; padding-bottom:38px;">
+
+            <h1 class="hero-title">
+              Beyond the<br>
+              Certificate
+            </h1>
+
+            <p class="hero-subtitle">
+              What Harsh, Riya and Naman shared about certifications,
+              exam realities, practical learning and building a career
+              beyond the badge.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- DIVIDER -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section">
+            <div class="divider"></div>
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- INTRO -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:36px; padding-bottom:10px;">
+
+            <p class="intro-text">
+              Certifications are everywhere. They sit on LinkedIn profiles,
+              appear in job descriptions and can feel like the fastest way
+              to prove that you know your stuff.
+            </p>
+
+            <p class="intro-text">
+              But during the Tech Club's certification panel, the conversation
+              got a little more honest.
+            </p>
+
+            <p class="intro-text">
+              <strong>Harsh, Riya and Naman</strong> shared their experiences
+              with cybersecurity, cloud and AI certifications, including how
+              they prepared, what the exams actually looked like and where
+              certifications fit into a larger career path.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- PANEL MEMBERS -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:30px; padding-bottom:35px;">
+
+            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+              class="panel-box">
+
+              <tr>
+
+                <td class="panel-cell">
+
+                  <p class="panel-label">
+                    Panel
+                  </p>
+
+                  <p class="panel-name">
+                    Harsh
+                  </p>
+
+                </td>
+
+                <td class="panel-cell">
+
+                  <p class="panel-label">
+                    Panel
+                  </p>
+
+                  <p class="panel-name">
+                    Riya
+                  </p>
+
+                </td>
+
+                <td class="panel-cell">
+
+                  <p class="panel-label">
+                    Panel
+                  </p>
+
+                  <p class="panel-name">
+                    Naman
+                  </p>
+
+                </td>
+
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- QUOTE -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:5px; padding-bottom:40px;">
+
+            <div class="quote-box">
+
+              <p class="quote">
+                “The more you practice, the more you understand
+                what you actually know.”
+              </p>
+
+              <p class="quote-caption">
+                A recurring idea from the panel
+              </p>
+
+            </div>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 01 -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:30px;">
+
+            <p class="eyebrow" style="margin-bottom:8px;">
+              01 / The Certifications
+            </p>
+
+            <h2>
+              From ethical hacking to cloud and AI
+            </h2>
+
+            <p class="body-text">
+              The discussion covered a wide range of certifications,
+              including Certified Ethical Hacker, penetration testing,
+              Security+, Microsoft Azure AI certifications, AWS
+              Solutions Architect, AI security and risk, Oracle Cloud
+              Infrastructure and social engineering defence.
+            </p>
+
+            <p class="body-text">
+              Rather than treating certifications as interchangeable
+              badges, the panel connected them to different areas of
+              technology and different stages of learning.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 02: EXAM REALITY -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <table width="100%" cellpadding="0" cellspacing="0"
+              border="0" class="dark-box">
+
+              <tr>
+                <td class="dark-content">
+
+                  <p class="dark-eyebrow">
+                    02 / What the exams actually look like
+                  </p>
+
+                  <h2 class="dark-title">
+                    Proctored, timed and very real.
+                  </h2>
+
+                  <p class="dark-text">
+                    The panel gave students a glimpse into what
+                    certification exams can actually look like once
+                    you are sitting on the other side of the preparation.
+                  </p>
+
+                  <p class="dark-text">
+                    For the <strong>CEH exam</strong> discussed during
+                    the session, the examination lasts approximately
+                    <strong>six hours</strong>. Candidates are proctored
+                    throughout the exam, with their examination
+                    environment and screen monitored.
+                  </p>
+
+                  <p class="dark-text">
+                    Before beginning, candidates may need to show their
+                    examination room to the proctor. During the exam,
+                    even stepping away for something as simple as getting
+                    water needs to be communicated.
+                  </p>
+
+                  <p class="dark-text">
+                    The panel also discussed the <strong>CPENT exam</strong>,
+                    which runs for <strong>24 hours</strong> and is divided
+                    into <strong>two 12-hour slots</strong>. It is a very
+                    different kind of commitment from a conventional
+                    certification exam and highlights just how intensive
+                    some practical cybersecurity assessments can be.
+                  </p>
+
+                  <p class="dark-text">
+                    The takeaway is simple: before booking an exam,
+                    understand the format, duration and conditions.
+                    Certification preparation is not just about knowing
+                    the syllabus. You also need to know what the exam
+                    experience itself demands.
+                  </p>
+
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- EXAM STATS -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <table class="stats" width="100%" cellpadding="0"
+              cellspacing="0" border="0">
+
+              <tr>
+
+                <td class="stat">
+
+                  <p class="stat-number">
+                    6 hrs
+                  </p>
+
+                  <p class="stat-description">
+                    CEH exam duration discussed during the panel
+                  </p>
+
+                </td>
+
+
+                <td class="stat">
+
+                  <p class="stat-number">
+                    5 min
+                  </p>
+
+                  <p class="stat-description">
+                    Break discussed during the CEH exam
+                  </p>
+
+                </td>
+
+
+                <td class="stat">
+
+                  <p class="stat-number">
+                    24 hrs
+                  </p>
+
+                  <p class="stat-description">
+                    CPENT exam, divided into two 12-hour slots
+                  </p>
+
+                </td>
+
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- WARNING -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <div class="callout">
+
+              <h3>
+                And one warning was very clear.
+              </h3>
+
+              <p class="callout-text">
+                Don't use services that promise to take the exam
+                for you or guarantee a pass. The panel shared that
+                candidates caught using such services can face
+                certification bans and lose future opportunities.
+              </p>
+
+            </div>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 03 -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:35px;">
+
+            <p class="eyebrow" style="margin-bottom:8px;">
+              03 / Look for opportunities
+            </p>
+
+            <h2>
+              Not every certification needs your wallet.
+            </h2>
+
+            <p class="body-text">
+              One of the useful takeaways from the session was that
+              students should look for opportunities before reaching
+              for their cards.
+            </p>
+
+            <p class="body-text">
+              The panel discussed free or voucher-based opportunities,
+              including certifications obtained through LinkedIn
+              promotions and merit-based university pathways.
+            </p>
+
+            <p class="body-text">
+              One panelist had received a certification opportunity
+              through an elective course after performing well.
+              The certification could replace a project requirement,
+              making it useful both academically and professionally.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 04 -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <p class="eyebrow" style="margin-bottom:8px;">
+              04 / The Real Preparation
+            </p>
+
+            <h2>
+              Fundamentals first. Practice second. Certificate third.
+            </h2>
+
+            <p class="body-text">
+              Across the discussion, the panel kept returning to
+              fundamentals. Knowing the concepts makes both
+              theoretical and practical questions easier to approach.
+            </p>
+
+            <p class="body-text">
+              Practice tests can reveal where you are weak.
+              Labs can show you how the concepts work.
+              Troubleshooting forces you to understand why something
+              works instead of simply remembering that it does.
+            </p>
+
+            <p class="body-text">
+              For cybersecurity students, practical platforms,
+              CTFs and hands-on exercises were highlighted as useful
+              ways to build that experience.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 05: DOMAIN -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <table width="100%" cellpadding="0" cellspacing="0"
+              border="0" class="soft-box">
+
+              <tr>
+                <td class="soft-content">
+
+                  <p class="soft-eyebrow">
+                    05 / Find your direction
+                  </p>
+
+                  <h2 class="soft-title">
+                    Pick a domain before picking a badge.
+                  </h2>
+
+                  <p class="soft-text">
+                    The panel encouraged students to first understand
+                    which area they want to explore. Once you have
+                    a direction, certifications become easier to choose.
+                  </p>
+
+                </td>
+              </tr>
+
+            </table>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 06: TIMING -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:35px;">
+
+            <p class="eyebrow" style="margin-bottom:8px;">
+              06 / Timing Matters
+            </p>
+
+            <h2>
+              Don't wait until the final trimester.
+            </h2>
+
+            <p class="body-text">
+              The panel suggested starting early rather than leaving
+              certifications and portfolio building until the very end
+              of the course.
+            </p>
+
+            <p class="body-text">
+              Doing certifications alongside coursework can also create
+              a useful cycle: learn the concept, practise it, then
+              apply it. By the time resumes begin circulating, you have
+              more than a list of certifications. You have experience
+              behind them.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- SECTION 07: PROJECTS -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <p class="eyebrow" style="margin-bottom:8px;">
+              07 / What Comes After
+            </p>
+
+            <h2>
+              Build something.
+            </h2>
+
+            <p class="body-text">
+              The panel also encouraged students to participate in
+              CTFs, hackathons and practical projects.
+            </p>
+
+            <p class="body-text">
+              A certification can demonstrate that you completed
+              an assessment. A project demonstrates that you can
+              take knowledge and turn it into something real.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- AI -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <div class="border-box">
+
+              <p class="eyebrow" style="margin-bottom:10px;">
+                A Future-Facing Takeaway
+              </p>
+
+              <h2 class="border-title">
+                Learn beyond the exam.
+              </h2>
+
+              <p class="border-text">
+                The discussion around AI highlighted another important
+                point: understanding the fundamentals is only the
+                beginning. Learning how models work, how to build with
+                them and how to deploy them can turn theoretical
+                knowledge into practical capability.
+              </p>
+
+            </div>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- FACULTY -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-bottom:40px;">
+
+            <div class="faculty-box">
+
+              <h3 class="faculty-title">
+                Stuck on what to choose?
+              </h3>
+
+              <p class="faculty-lead">
+                Talk to your faculty.
+              </p>
+
+              <p class="faculty-text">
+                The panel highlighted faculty guidance as a useful
+                resource when students are unsure about a domain,
+                certification or career direction. The advice is
+                available, but students need to ask for it.
+              </p>
+
+            </div>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- FINAL TAKEAWAY -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="section" style="padding-top:5px; padding-bottom:48px;">
+
+            <p class="eyebrow" style="margin-bottom:10px;">
+              The Takeaway
+            </p>
+
+            <h2 class="final-title">
+              Build capability,<br>
+              not just a checklist.
+            </h2>
+
+            <p class="final-text">
+              The session started with a simple question:
+              which certifications should students pursue?
+            </p>
+
+            <p class="final-text">
+              It ended with a much better one:
+              <strong>what do you actually want to learn,
+              and can you prove that you know it?</strong>
+            </p>
+
+            <p class="final-text">
+              Pick a domain. Build your fundamentals. Practise.
+              Ask questions. Work on projects. Then choose the
+              certifications that support that journey.
+            </p>
+
+            <p class="final-line">
+              A certificate can open a door.<br>
+              Your skills are what carry you through it.
+            </p>
+
+          </td>
+        </tr>
+
+
+        <!-- ========================================= -->
+        <!-- FOOTER -->
+        <!-- ========================================= -->
+
+        <tr>
+          <td class="footer">
+
+            <p class="footer-title">
+              TECH CLUB
+            </p>
+
+            <p class="footer-text">
+              Certification Panel • Event Newsletter
+            </p>
+
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
